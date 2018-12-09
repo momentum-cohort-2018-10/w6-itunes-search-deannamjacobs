@@ -9,7 +9,7 @@ submitButton.addEventListener("click", function (event) {
             term: inputField.value,
             media: "music",
             // attribute: genreIndex = 8,
-            // entity: "song",
+            entity: "song",
             // // limit: 25,
             // explicit: "No",
         },
@@ -58,6 +58,6 @@ submitButton.addEventListener("click", function (event) {
     });
 })
 
-
+const audioPlayer = document.getElementById("audio-player").addEventListener("click, function (event)") { }
 
 

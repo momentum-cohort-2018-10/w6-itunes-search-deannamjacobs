@@ -6,21 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="jquery-3.3.1.min.js" defer></script>
   <script src="itunes.js" defer></script>
+
   <link rel="stylesheet" type="text/css" href="mystyle.css?v=1.2"> 
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cookie">
+  
+
   <title>Holiday Song Search</title>
 </head>
 <body>
-  <h1>Holiday Song Search</h1>
+  <h1>Holiday Song Find</h1>
   <div>
     <input id="input-field" input type="text" class="depth" placeholder="Enter song title or artist" /></input>
-  <button id="submit-button">Submit</button>
+  <a href="#" button id="submit-button" class="submit-button">Find It!</a>
   </div>
+  <audio controls preload="metadata" style=" width:400px;">
+	<source src="url: "https://itunes-api-proxy.glitch.me/search?term=music&genreIndex=8"," type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio><br />
+<a href="http://scriptgenerator.net/really-simple-embed-audio-player-script/" title="Generate here your HTML5 audio player" style="text-align: right;display: block"></a> 
+</div>
   <div id="search-results">
   </div>
 <div id="snowflakeContainer">
     <p class="snowflake">*</p>
 </div>
+
 <script src="fallingsnow_v6.js"></script>
 </body>
 

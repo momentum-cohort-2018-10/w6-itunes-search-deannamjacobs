@@ -16,9 +16,9 @@ body {
 
 input {
   width: 50%;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.2rem 0.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   border-color: green;
   box-shadow: green;
 }
@@ -29,6 +29,31 @@ input:focus {
     -webkit-box-shadow: inset 0 2px 2px rgba(12, 204, 124, 0.6), 0 0 12px rgba(12, 204, 124, 0.6); 
     box-shadow: inset 0 2px 2px rgba(12, 204, 124, 0.6), 0 0 8px rgba(11, 185, 113, 0.6); 
 }  
+
+.submit-button {
+	background-color:#44c767;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Cookie-bold;
+	font-size:28px;
+	padding:2px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+.submit-button:hover {
+	background-color:#5cbf2a;
+}
+
+.submit-button:active {
+	position:relative;
+	top:1px;
+}
   
   #snowflakeContainer {
     position: absolute;
@@ -39,7 +64,7 @@ input:focus {
 .snowflake {
     padding-left: 15px;
     font-family: Cambria, Georgia, serif;
-    font-size: 14px;
+    font-size: 26px;
     line-height: 24px;
     position: fixed;
     color: #FFFFFF;
