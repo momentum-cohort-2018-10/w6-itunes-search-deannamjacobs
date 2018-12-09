@@ -3,13 +3,15 @@ const inputField = document.getElementById("input-field")
 
 submitButton.addEventListener("click", function (event) {
     $.ajax({
-        url: "https://itunes-api-proxy.glitch.me/search?term=",
+        url: "https://itunes-api-proxy.glitch.me/search?term=music&genreIndex=8",
         dataType: "json",
         data: {
             term: inputField.value,
+            media: "music",
+            // attribute: genreIndex = 8,
             // entity: "song",
-            // limit: 25,
-            // explicit: "No"
+            // // limit: 25,
+            // explicit: "No",
         },
 
         success: function (results) {
@@ -17,49 +19,45 @@ submitButton.addEventListener("click", function (event) {
             console.log(results);
 
             let resultsDiv = document.getElementById("search-results")
-
+            //This places the search results in resultsDiv
+            resultsDiv.innerHTML = ""
+            //This gets the HTML markup from the search results
             let countP = document.createElement("p")
-
-            countP.innerText = "Total count: ${results.resultCount}"
 
             resultsDiv.appendChild(countP)
 
-            for (let song of search.results) {
+            for (let song of results.results) {
 
                 let songP = document.createElement("p")
 
+                let songArtistP = document.createElement("p")
+
                 let songLink = document.createElement("a")
 
-                songLink.href = song.songViewUrl
+                let coverArt = document.createElement("img")
 
-                songLink.innerText = song.songName
+                coverArt.src = song.artworkUrl100
+
+                song.href = song.trackViewUrl
+
+                songLink.href = song.trackViewUrl
+
+                songLink.innerText = song.trackName
 
                 songLink.innerText = song.artistName
 
                 songP.appendChild(songLink)
+
+                songP.appendChild(songArtistP)
+
+                songP.appendChild(coverArt)
 
                 resultsDiv.appendChild(songP)
             }
         }
     });
 })
-// $results.empty();
-
-// $.each(data.results, function (i, result) {
-//     if (i > 24) { return false; }
 
 
 
-
-// })
-// //This is the function for the Submit button.
-
-
-
-// var $input = $('<input type="search" />').appendTo(document.body),
-//     $results = $('<div class="results" />').appendTo(document.body);
-
-            // // $input.val('LeCrae');
-
-            // // function fetch(term) {
 
