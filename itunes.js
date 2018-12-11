@@ -10,7 +10,7 @@ submitButton.addEventListener("click", function (event) {
             media: "music",
             // attribute: genreIndex = 8,
             entity: "song",
-            // // limit: 25,
+            limit: 25,
             // explicit: "No",
         },
 
@@ -40,7 +40,7 @@ submitButton.addEventListener("click", function (event) {
 
                 song.href = song.trackViewUrl
 
-                songLink.href = song.trackViewUrl
+                songLink.href = song.previewUrl
 
                 songLink.innerText = song.trackName
 
@@ -58,6 +58,6 @@ submitButton.addEventListener("click", function (event) {
     });
 })
 
-const audioPlayer = document.getElementById("audio-player").addEventListener("click, function (event)") { }
+
 
 

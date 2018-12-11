@@ -54,6 +54,10 @@ input:focus {
 	position:relative;
 	top:1px;
 }
+
+.audio-player {
+    width: 800px;
+}
   
   #snowflakeContainer {
     position: absolute;
